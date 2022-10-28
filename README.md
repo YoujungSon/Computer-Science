@@ -2,19 +2,19 @@
 
 # Navigator
 
-* [🌑 Data Structure]()
+* [🌑 Data Structure](https://github.com/vnfdusdl/computer-science/tree/main/DataStructure)
 
-* [🌘 Network]()
+* [🌘 Network](https://github.com/vnfdusdl/computer-science/tree/main/Network)
  
-* [🌗 Operating System]()
+* [🌗 Operating System](https://github.com/vnfdusdl/computer-science/tree/main/OperatingSystem)
  
-* [🌕 Algorithm]()
+* [🌕 Algorithm](https://github.com/vnfdusdl/computer-science/tree/main/Algorithm)
 
-* [🌓 JavaScript]()
+* [🌓 JavaScript](https://github.com/vnfdusdl/computer-science/tree/main/JavaScript)
 
-* [🌒 TypeScript]()
+* [🌒 TypeScript](https://github.com/vnfdusdl/computer-science/tree/main/TypeScript)
 
-* [🌑 Etc]()
+* [🌑 Etc](https://github.com/vnfdusdl/computer-science/tree/main/Etc)
 
 
 
