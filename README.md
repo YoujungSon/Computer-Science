@@ -1,5 +1,15 @@
-# Computer-Science
-Computer-Science 스터디 공간입니다 💻
+> Computer-Science 스터디 공간입니다 💻
+
+# Navigator
+
+* [🌑 Data Structure]()
+* [🌘 Network]()
+* [🌗 Operating System]()
+* [🌕 Algorithm]()
+* [🌓 JavaScript]()
+* [🌒 TypeScript]()
+* [🌑 Etc]()
+
 
 
 # 참가 인원
