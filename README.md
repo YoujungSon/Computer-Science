@@ -3,11 +3,17 @@
 # Navigator
 
 * [🌑 Data Structure]()
+
 * [🌘 Network]()
+ 
 * [🌗 Operating System]()
+ 
 * [🌕 Algorithm]()
+
 * [🌓 JavaScript]()
+
 * [🌒 TypeScript]()
+
 * [🌑 Etc]()
 
 
