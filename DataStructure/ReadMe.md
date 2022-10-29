@@ -1,8 +1,8 @@
 # Navigator
 
 * [List](https://github.com/vnfdusdl/computer-science/tree/main/DataStructure/List)
-* [Stack]()
-* [Queue]()
+* [Stack](https://github.com/vnfdusdl/computer-science/blob/main/DataStructure/Stack/ReadMe.md)
+* [Queue](https://github.com/vnfdusdl/computer-science/tree/main/DataStructure/Queue)
 
 
 # 자료구조란 무엇인가?
