@@ -53,9 +53,10 @@ int[] arr = new int[10];
 
 위와같이 처음에 할당할 크기(reservation)를 정해주어야 비로소 배열을 생성할 수 있다.
 
-![image](https://user-images.githubusercontent.com/79268661/198817488-758531ac-fe2b-48d7-9e97-dc1432cf338f.png)
+![KakaoTalk_Photo_2022-10-29-16-18-04 009](https://user-images.githubusercontent.com/79268661/198819289-f8183cfa-5100-458a-a202-ba4e37efaa70.jpeg)
 
-위와 같이 int의 크기인 "4byte"만큰의 공간을 총 8개 할당받는다.
+
+위와 같이 int의 크기인 "4byte"만큼의 공간을 총 8개 할당받는다.
 
 ## 장점
 
@@ -66,6 +67,8 @@ ArrayList는 가장 처음에 지정해준 타입의 크기만한 공간을 rese
 그렇기 떄문에 컴퓨터 입장에서 특정 index에 진입할 때, 엄청나게 빠르다.
 
 다음의 그림을 보자.
+
+![KakaoTalk_Photo_2022-10-29-16-18-04 008](https://user-images.githubusercontent.com/79268661/198819299-65733228-cc6f-46a1-8bcb-d8bf041c5aa0.jpeg)
 
 
 위 그림에서 Index 5에 값을 가져오라고하면 여러분들은 어떻게 할 것인가?
@@ -91,17 +94,25 @@ index 5가 적혀있는 부분의 값을 말할 것이다.
 
 아래의 그림처럼 특정 Index에 값을 넣어야하는 경우에는 어떻게 해야하는가?
 
+![KakaoTalk_Photo_2022-10-29-16-18-04 007](https://user-images.githubusercontent.com/79268661/198819302-5ce1c866-0fcc-4bf2-be48-9202202517ce.jpeg)
+
 
 먼저 모든 값들을 1칸씩 다음 Index로 밀어낸다음 특정 Index에 값을 삽입해야한다.
 
-> Index가 1000000번까지 존재하는 배열의 0 Index에 삽일할 경우에 999999개를 한 칸씩 옆으로 밀어주어야 한다. 상당히 느리다.
+![KakaoTalk_Photo_2022-10-29-16-18-04 006](https://user-images.githubusercontent.com/79268661/198819316-94d4837d-4538-4e1f-b203-c705e090aac7.jpeg)
 
+
+> Index가 1000000번까지 존재하는 배열의 0 Index에 삽일할 경우에 999999개를 한 칸씩 옆으로 밀어주어야 한다. 상당히 느리다.
 
 ### 삭제
 
 삭제 또한 마찬가지이다. 
 
 아래의 그림처럼 특정 Index를 삭제하면 뒤에 존재하는 Index 값들을 앞으로 1칸씩 당겨주어야하는 작업이 필요하다.
+
+![KakaoTalk_Photo_2022-10-29-16-18-04 005](https://user-images.githubusercontent.com/79268661/198819324-9f676610-f58f-497a-878e-247951841fad.jpeg)
+
+![KakaoTalk_Photo_2022-10-29-16-18-04 005](https://user-images.githubusercontent.com/79268661/198819331-698709db-1f27-4c8b-839d-32804d9795dc.jpeg)
 
 > Index가 1000000번까지 존재하는 배열의 0 Index를 삭제할 경우에 뒤에 존재하는 999999개를 한 칸씩 옆으로 밀어주어야 한다. 상당히 느리다.
 
@@ -135,6 +146,8 @@ root.next.value = 11;
 
 위와 같이 구성하면 다음 그림과 같이 구성된다.
 
+![image](https://user-images.githubusercontent.com/79268661/198819405-25d6f02f-6f6e-4245-aaef-ca0dd6634b32.png)
+
 그림에도 나와있듯이, root가 0번 Index가 된다. root.next가 1번 Index가 된다.
 
 ## LikedList 단점
@@ -155,11 +168,17 @@ root.next.value = 11;
 
 다음 그림을 보자.
 
+![KakaoTalk_Photo_2022-10-29-16-18-03 003](https://user-images.githubusercontent.com/79268661/198819418-23da5350-39c8-4885-9fcd-4b87112dcb1c.jpeg)
+
+
 0 Index와 1 Index에 새로운 값을 삽입하려고 한다.
 
 이때 LinkedList는 아주 빠르게 삽입이 가능하다.
 
 다음의 그림을 보자.
+
+![KakaoTalk_Photo_2022-10-29-16-18-03 002](https://user-images.githubusercontent.com/79268661/198819428-2b524683-f0ae-4e2c-88a1-1a6acd4c1322.jpeg)
+
 
 위 그림처럼 0 Index에 존재하는 "next"값을 삽입하려는 요소로 변경한다.
 그리고 새롭게 삽입하는 요소의 "next"값을 0x320으로 바꾸어준다.
@@ -168,6 +187,22 @@ root.next.value = 11;
 
 
 삭제 또한 마찬가지이다. 특정 값이 빠져나가게 되면 특정 값을 가리키던 "next"값을 특정 값이 가리키던 "next"로 바꾸어주면 된다.
+
+# ArrayList 추가 내용
+
+ArrayList에서 특수한 상황일 때, 더욱 삽입 및 삭제가 더욱 오래걸린다는 것을 보았다.
+
+ArrayList는 처음 할당받을 때, 메모리에 연속된 공간을 할당받는다.
+
+> Array에 모든 값이 채워져있는 경우에 새로운 값을 추가하려고하면 일련의 작업이 필요하다.
+
+ArrayList에 새로운 값을 넣으면 같은 Array의 크기 + 1 만큼의 새로운 메로리 공간을 할당받아야한다.
+
+이유는 이전에 연속된 메모리 공간에 추가적으로 메모리공간을 할당받을 수 있는 기능이 없다.
+
+그래서 새로운 메모리공간을 할당받고 이전의 배열을 copy한 다음 새로운 값을 할당해주어야하는 일련의 작업이 필요하다.
+
+
 
 
 
