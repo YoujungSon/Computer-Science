@@ -1,6 +1,6 @@
 # Navigator
 
-* [List]()
+* [List](https://github.com/vnfdusdl/computer-science/tree/main/DataStructure/List)
 * [Stack]()
 * [Queue]()
 
