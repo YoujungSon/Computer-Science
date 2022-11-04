@@ -6,6 +6,26 @@ FIFO(First In First Out) 형태로 양쪽 끝에서 데이터의 삽입과 삭�
 - `front` : 데이터가 제거되는 곳
 - 데이터를 삭제하기 전에는 큐가 `empty`한지, 큐에 데이터를 추가하려 할 때는 큐가 `full`인지 확인 후 진행해야 한다.
 
+```javascript
+class Queue {
+  constructor() {
+    this._arr = [];
+  }
+  enqueue(item) {
+    this._arr.push(item);
+  }
+  dequeue() {
+    return this._arr.shift();
+  }
+}
+
+const queue = new Queue();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+queue.dequeue(); // 1
+```
+
 - **선형 큐 Linear Queue**
     
     
