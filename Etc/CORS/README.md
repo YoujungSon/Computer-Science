@@ -6,7 +6,7 @@
 - 리소스를 받아올 때, origin이라는 꼬리표를 달고오는데, 같은 origin의 리소스끼리만 상호작용할 수 있도록 제한하는 것이 SOP (document.location.origin으로 origin 확인 가능!)
 - 잠재적으로 해로울 수 있는 문서를 분리하여 공격받을 수 있는 경로를 줄이는 역할을 해줌.
 - same-origin이란 프로토콜(Protocol), 호스트(Host), 포트(Port)가 같아야 함을 의미함. 포트는 드러나 있을 때만 같아야하고, 드러나있지 않다면 같지 않아도 상관없음.
-  - https://computer.com:443 이라고 했을 때, https가 protocol, computer.com이 , :443이 port
+  - https://computer.com:443 이라고 했을 때, https가 protocol, computer.com이 호스트, 443이 port
 
 ```
 다음 중 same-origin 인 것들은?
