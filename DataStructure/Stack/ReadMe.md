@@ -7,6 +7,29 @@ LIFO(Last In First Out) 형태로 한 쪽 끝에서만 자료를 넣고 빼는 �
 - 스택의 맨 위 요소, `top`에만 접근이 가능하기 때문에 `top`이 아닌 위치의 데이터에 대한 접근, 삽입, 삭제는 모두 불가능하다.
 - `stack overflow` : 꽉 찬 스택에 `stack.push`를 시도하는 것
 - `stack underflow` : 스택이 비어있을 때 `stack.pop`을 시도하는 것
+- 
+```javascript
+class Stack {
+  constructor() {
+    this._arr = [];
+  }
+  push(item) {
+    this._arr.push(item);
+  }
+  pop() {
+    return this._arr.pop();
+  }
+  peek() {
+    return this._arr[this._arr.length - 1];
+  }
+}
+
+const stack = new Stack();
+stack.push(1);
+stack.push(2);
+stack.push(3);
+stack.pop(); // 3
+```
 
 **시간 복잡도**
 
