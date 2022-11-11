@@ -6,7 +6,7 @@
 - 리소스를 받아올 때, origin이라는 꼬리표를 달고오는데, 같은 origin의 리소스끼리만 상호작용할 수 있도록 제한하는 것이 SOP (document.location.origin으로 origin 확인 가능!)
 - 잠재적으로 해로울 수 있는 문서를 분리하여 공격받을 수 있는 경로를 줄이는 역할을 해줌.
 - same-origin이란 프로토콜(Protocol), 호스트(Host), 포트(Port)가 같아야 함을 의미함. 포트는 드러나 있을 때만 같아야하고, 드러나있지 않다면 같지 않아도 상관없음.
-  - https://computer.com:443 이라고 했을 때, https가 protocol, computer.com이 도메인, :443이 port
+  - https://computer.com:443 이라고 했을 때, https가 protocol, computer.com이 , :443이 port
 
 ```
 다음 중 same-origin 인 것들은?
@@ -20,8 +20,8 @@ http://blog.one.com:808/pgae.html
 
 ## 1. SOP는 언제 적용될까?
 
-- https://www.boribori.com 에서 http://www.user.boribori.com 으로 사용자 정보 json을 요청했을 때, document의 origin인 https://www.boribori.com와 json의 origin인 http://www.user.boribori.com 가 다르기 때문에 SOP 가 적용되어서 JSON 데이터를 읽을 수 없다.
-- 웹에서 로컬스토리지, 세션스토리지 같은 웹 데이터베이스는 origin 마다 하나씩 생성되어, same-origin을 갖는 document가 script 에서 접근이 가능하다.
+- https://www.boribori.com 에서 https://www.user.boribori.com 으로 사용자 정보 json을 요청했을 때, document의 origin인 https://www.boribori.com와 json의 origin인 https://www.user.boribori.com 가 다르기 때문에 SOP 가 적용되어서 JSON 데이터를 읽을 수 없다.
+- 웹에서 로컬스토리지, 세션스토리지 같은 웹 데이터베이스는 origin 마다 하나씩 생성되어, same-origin을 갖는 document의 script 에서 접근이 가능하다.
 
 ## 2. SOP의 중요성
 
