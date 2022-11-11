@@ -46,12 +46,12 @@ http://blog.one.com:808/pgae.html
 ## CORS 동작 방식
 
 - header의 origin 에 요청하는 쪽의 protocol, 도메인, port가 담김.
-- 이 요청을 받은 서버는 답장의 헤더에 access-control-allow-origin 헤더에 이 데이터를 읽을 수 있는 origin을 따로 넣어준다. (즉, 허용할 origin만을 추가)
-- 브라우저는 origin에서 보낸 origin 값과 서버의 답장에 담긴 access-control-allow-origin에 똑같은 출처가 담겨있으면 안전한 요청으로 간주하고 응답 요청을 받음
+- 이 요청을 받은 서버는 응답의 헤더에 access-control-allow-origin 헤더에 이 데이터를 읽을 수 있는 origin을 따로 넣어준다. (즉, 허용할 origin만을 추가)
+- 브라우저는 origin에서 보낸 origin 값과 서버의 응답에 담긴 access-control-allow-origin에 똑같은 출처가 담겨있으면 안전한 요청으로 간주하고 응답 요청을 받음
 - 그렇지 않으면 SOP 에 근거하여 브라우저는 CORS 에러를 띄움
 
 - CORS 시나리오 예제
-  - 단순요청(Simple Request)
+  - 단순 요청(Simple Request)
   - 프리플라이트 요청(Preflight Request)
   - 인증정보 포함 요청(Credentialed Request)
 
@@ -59,7 +59,7 @@ http://blog.one.com:808/pgae.html
 
 - 사전 확인 작업으로 예비 요청인 preflight를 먼저 보내는 방식
 - options 메서드를 통해 다른 도메인의 리소스에 요청이 가능한지 확인 작업을 한다
-- client에서 server로 preflight 요청을 보내고 허용 응답이 온다면 actual 요청을 보낸다. 거부 요청이 온다면 보내지 않는다.
+- client에서 server로 preflight 요청을 보내고 허용 응답이 온다면 actual 요청을 보낸다. 거부응답이 온다면 요청이 온다면 보내지 않는다.
 - 가장 자주 만나는 CORS 방식
 
 **preflight request** 요청 헤더
