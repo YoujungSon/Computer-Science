@@ -29,7 +29,7 @@ HTTP 특징은 여러가지가 존재한다.
 
 통신을 위해서 서버에 연결을 진행하고 서버와 클라이언트는 연결을 끊어버린다.
 
-
+![image](https://user-images.githubusercontent.com/79268661/202673029-40d8488e-a18c-4234-bfbe-cc75fa43d5ce.png)
 
 위의 그림과 같이 HTTP는 1 Request에는 1Response가 주어지고, 연결은 끊는다.
 
@@ -45,6 +45,8 @@ HTTP 특징은 여러가지가 존재한다.
 # HTTP 구조
 
 HTTP 구조는 아래와 같은 구조를 가지고 있다.
+
+![image](https://user-images.githubusercontent.com/79268661/202673303-25c8f4c4-4513-4585-b656-d71ef7db2ff5.png)
 
 * start line은 method, target, version이 명시된다.
 * HTTP Header는 HTTP에 담겨있는 전반적인 데이터에 대한 설명과 연결에 대한 정보를 나열한다.
@@ -83,6 +85,8 @@ Http는 현재 1.1 버전을 사용하고 있다.
 
 ## HTTP Header
 
+<img width="500" alt="스크린샷 2022-11-18 오후 6 23 41" src="https://user-images.githubusercontent.com/79268661/202673094-79561130-a67b-4c72-bd37-139093cf839b.png">
+
 Http Header는 다음과 같이 4가지가 있다.
 
 1. General header : 요청과 응답 모두에 적용되지만 바디에서 최종적으로 전송되는 데이터와는 관련이 없는 헤더.
@@ -118,8 +122,4 @@ Http Header는 다음과 같이 4가지가 있다.
 3. content-type: 응답하는 내용의 타입과 문자 포맷을 표현한다.
 
 4. cache-control : 캐시 관리에 대한 정보를 표현한다.
-
-
-
-
 
