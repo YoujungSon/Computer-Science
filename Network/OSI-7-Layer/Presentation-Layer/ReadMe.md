@@ -14,7 +14,7 @@
 
 정보의 제공 형태는 HTTP Header에 담겨있다.
 
-
+<img width="347" alt="스크린샷 2022-11-18 오후 7 35 37" src="https://user-images.githubusercontent.com/79268661/202683652-7cf56e03-b0b8-4e15-8824-fcc992db28b7.png">
 
 위의 그림과 같이 "Accept"라는 헤더를 통해서 데이터의 표현 형식을 포함하고 있는 것을 볼 수 있다.
 
