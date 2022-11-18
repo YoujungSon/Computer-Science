@@ -6,7 +6,7 @@
 - 리소스를 받아올 때, origin이라는 꼬리표를 달고오는데, 같은 origin의 리소스끼리만 상호작용할 수 있도록 제한하는 것이 SOP (document.location.origin으로 origin 확인 가능!)
 - 잠재적으로 해로울 수 있는 문서를 분리하여 공격받을 수 있는 경로를 줄이는 역할을 해줌.
 - same-origin이란 프로토콜(Protocol), 호스트(Host), 포트(Port)가 같아야 함을 의미함. 포트는 드러나 있을 때만 같아야하고, 드러나있지 않다면 같지 않아도 상관없음.
-  - https://computer.com:443 이라고 했을 때, https가 protocol, computer.com이 도메인, :443이 port
+  - https://computer.com:443 이라고 했을 때, https가 protocol, computer.com이 호스트, 443이 port
 
 ```
 다음 중 same-origin 인 것들은?
@@ -20,8 +20,8 @@ http://blog.one.com:808/pgae.html
 
 ## 1. SOP는 언제 적용될까?
 
-- https://www.boribori.com 에서 http://www.user.boribori.com 으로 사용자 정보 json을 요청했을 때, document의 origin인 https://www.boribori.com와 json의 origin인 http://www.user.boribori.com 가 다르기 때문에 SOP 가 적용되어서 JSON 데이터를 읽을 수 없다.
-- 웹에서 로컬스토리지, 세션스토리지 같은 웹 데이터베이스는 origin 마다 하나씩 생성되어, same-origin을 갖는 document가 script 에서 접근이 가능하다.
+- https://www.boribori.com 에서 https://www.user.boribori.com 으로 사용자 정보 json을 요청했을 때, document의 origin인 https://www.boribori.com와 json의 origin인 https://www.user.boribori.com 가 다르기 때문에 SOP 가 적용되어서 JSON 데이터를 읽을 수 없다.
+- 웹에서 로컬스토리지, 세션스토리지 같은 웹 데이터베이스는 origin 마다 하나씩 생성되어, same-origin을 갖는 document의 script 에서 접근이 가능하다.
 
 ## 2. SOP의 중요성
 
@@ -46,12 +46,12 @@ http://blog.one.com:808/pgae.html
 ## CORS 동작 방식
 
 - header의 origin 에 요청하는 쪽의 protocol, 도메인, port가 담김.
-- 이 요청을 받은 서버는 답장의 헤더에 access-control-allow-origin 헤더에 이 데이터를 읽을 수 있는 origin을 따로 넣어준다. (즉, 허용할 origin만을 추가)
-- 브라우저는 origin에서 보낸 origin 값과 서버의 답장에 담긴 access-control-allow-origin에 똑같은 출처가 담겨있으면 안전한 요청으로 간주하고 응답 요청을 받음
+- 이 요청을 받은 서버는 응답의 헤더에 access-control-allow-origin 헤더에 이 데이터를 읽을 수 있는 origin을 따로 넣어준다. (즉, 허용할 origin만을 추가)
+- 브라우저는 origin에서 보낸 origin 값과 서버의 응답에 담긴 access-control-allow-origin에 똑같은 출처가 담겨있으면 안전한 요청으로 간주하고 응답 요청을 받음
 - 그렇지 않으면 SOP 에 근거하여 브라우저는 CORS 에러를 띄움
 
 - CORS 시나리오 예제
-  - 단순요청(Simple Request)
+  - 단순 요청(Simple Request)
   - 프리플라이트 요청(Preflight Request)
   - 인증정보 포함 요청(Credentialed Request)
 
@@ -59,7 +59,7 @@ http://blog.one.com:808/pgae.html
 
 - 사전 확인 작업으로 예비 요청인 preflight를 먼저 보내는 방식
 - options 메서드를 통해 다른 도메인의 리소스에 요청이 가능한지 확인 작업을 한다
-- client에서 server로 preflight 요청을 보내고 허용 응답이 온다면 actual 요청을 보낸다. 거부 요청이 온다면 보내지 않는다.
+- client에서 server로 preflight 요청을 보내고 허용 응답이 온다면 actual 요청을 보낸다. 거부응답이 온다면 요청이 온다면 보내지 않는다.
 - 가장 자주 만나는 CORS 방식
 
 **preflight request** 요청 헤더
