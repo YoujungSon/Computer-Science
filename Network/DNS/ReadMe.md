@@ -47,7 +47,7 @@ Third-Level Domain Second-Level Domain Top-Level Domain(TLD) Root Domain
 **로컬 DNS 서버** - ISP 제공 ex) KT, SKT
 
 클라이언트와 직접적으로 통신을 하고 네임서버와 통신을 하기 위해 존재한다. 
-https://s3.us-west-2.amazonaws.com/secure.notion-static.com/94ab502c-e90e-4dda-894c-dc4d2e26c2c8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221123T175553Z&X-Amz-Expires=86400&X-Amz-Signature=659993d92a3a9e28c26569d96e8bce3f10363f86f60c6b0002ff0386659e4485&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObjecthttps://s3-us-west-2.amazonaws.com/secure.notion-static.com/94ab502c-e90e-4dda-894c-dc4d2e26c2c8/Untitled.png)
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/94ab502c-e90e-4dda-894c-dc4d2e26c2c8/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221123T180012Z&X-Amz-Expires=86400&X-Amz-Signature=415de56ee1f8fa638e108171661071ac33fb04106100f731299722074c68e8a6&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
 **재귀적 질의(Recursive Query)**
 
