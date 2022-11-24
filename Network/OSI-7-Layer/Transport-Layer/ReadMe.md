@@ -178,7 +178,7 @@ TCP를 이용한 통신을 할 때 프로세스와 프로세스를 연결하기 
 
 4 handshake는 TCP 연결을 종료할 때 사용된다.
 
-
+![image](https://user-images.githubusercontent.com/79268661/203747823-10def08d-36d7-4cdb-afa8-26a35b6076dc.png)
 
 1. A -> B: FIN 프로세스 A가 연결을 종료하겠다는 FIN 플래그를 전송 프로세스 B가 FIN 플래그로 응답하기 전까지 연결을 계속 유지
 
