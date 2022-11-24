@@ -37,6 +37,8 @@ persistence connection은 Http 1.1 version 이후부터 "connection" 필드로 �
 
 아래와 같이 connection의 옵션 값을 "keep-alive"로 설정해주면 connection은 일정 시간동안 유지가 되며, 불필요한 연결 동작이 필요없어진다.
 
+<img width="756" alt="image" src="https://user-images.githubusercontent.com/79268661/203757463-01826424-f76e-4ca5-9a6d-682f54c928ea.png">
+
 
 ## connection 사용법
 
