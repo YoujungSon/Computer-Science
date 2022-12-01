@@ -18,9 +18,13 @@ DNS는 Domain Name System의 약자
 
 그러면 DNS 서버는 실제 IP를 주게 된다.
 
+DNS 스푸핑: 사용자 컴퓨터가 DNS에 IP를 물어보는 것을 가로채 해커들이 만들어둔 가짜 사이트 IP를 알려줘서 거기로 접속하게 할 수도 있다.
+
 ## **DNS 계층 구조**
 
-하나의 DNS 서버에서 전 세계 모든 DNS 정보를 관리하는 것이 아니라 DNS는 서버를 여러 서버로 분리하기 위해 도메인을 계층적으로 관리한다. 트래픽과 데이터를 분산함으로써 안정적인 서비스를 제공하고 있다.
+하나의 DNS 서버에서 전 세계 모든 DNS 정보를 관리하는 것이 아니라 DNS는 서버를 여러 서버로 분리하기 위해 도메인을 계층적으로 관리한다. 
+트래픽과 데이터를 분산함으로써 안정적인 서비스를 제공하고 있다.
+루트 DNS 서버 자체는 전세계에 13군데가 있다. 한국에는 없지만 미러 서버가 이를 대신한다. 
 
 ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d6377582-3fae-4d42-8f08-35ea43254327/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221123T175454Z&X-Amz-Expires=86400&X-Amz-Signature=f071a4ddc0a99b4a4a01e9b81ed33b0a3d24da81c6bd6e8ef9fdc568b56bf7f1&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
@@ -71,7 +75,7 @@ Root Name Server에 IP를 요청한다.
 
 ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ff355ecc-4414-416b-a612-7f6f734ec471/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221123T175623Z&X-Amz-Expires=86400&X-Amz-Signature=fb3c5b20167bd85410bcfad51f6f01f233f552462aedb4b6c3c76693a8d334c0&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
-1. DNS 레코드를 추가해 도메인 이름에 IP 주소를 매핑한다.
+2. DNS 레코드를 추가해 도메인 이름에 IP 주소를 매핑한다.
 
 ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c13bc468-e6de-45a1-8cd3-ed0a380f64f9/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221123%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221123T175646Z&X-Amz-Expires=86400&X-Amz-Signature=abbacc189067040dff879c7c455377c95b1dfcef2ebf1da9725f07399890ca1d&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Untitled.png%22&x-id=GetObject)
 
@@ -87,14 +91,6 @@ ex) boribori.com, www.boribori.com, m.boribori.com, dev.boribori.com
 
 그래서 이 값들을 가지고 어떤 값이 매핑되는지 설정해줄 수 있다.
 
-루트 DNS 서버 자체는 전세계에 13군데가 있습니다. 한국에는 없지만 미러 서버가 이를 대신합니다. 
-
-DNS 스푸핑: 사용자 컴퓨터가 DNS에 IP를 물어보는 것을 가로채 해커들이 만들어둔 가짜 사이트 IP를 알려줘서 거기로 접속하게 할 수도 있다.
-
-로컬 DNS서버는 일반적으로 통신사 것으로 세팅되어 있는데 이걸 수정하는 것은 정부에서 막아놓은 사이트에 접속하거나 또는 특정 서비스를 보다 빠르게 이용하기 위해 로컬 DNS서버를 기본값이랑 다른것으로 설정할 수 있습니다.
-
-예를 들어서 윈도우에서 기본 DNS를 구글 DNS 서버 주소인 8,8,8,8로 설정하면 유튜브 등 구글에서 제공하는 서비스를 보다 빠르고 쾌적하게 이용할 수 있습니다. 대신 다른 서비스들은 느려질 수 있으니 주의해야 한다.
-
 **A Record**
 
 도메인을 서버의 IP로 직접 연결하는 것. 이 방식은 IP로의 직통연결이라 접속이 빠르다는 장점이 있다.
@@ -103,7 +99,7 @@ DNS 스푸핑: 사용자 컴퓨터가 DNS에 IP를 물어보는 것을 가로채
 
 **CNAME**
 
-도메인을 별명과 연결하는 것. IP가 유동적으로 변하는 서버의 경우 바뀌는 IP들에 일정하게 연결된 다른 도메인 즉, canonical name을 적는다는 뜻. AWS나 Firebase같은 데서 서비스나 인스턴스를 만들면 주는 주소는 서버 IP가 수시로 바뀌기 때문이다. 그걸 도메인에 연결하는게 CNAME 방식이다. IP가 유동적으로 사용된다는 장점이 있지만 대신 한 군데를 더 거친다는 것이 단점이다.
+도메인을 별명과 연결하는 것. IP가 유동적으로 변하는 서버의 경우 바뀌는 IP들에 일정하게 연결된 다른 도메인 즉, canonical name을 적는다는 뜻. AWS나 Firebase같은 데서 서비스나 인스턴스를 만들면 주는 주소는 서버 IP가 수시로 바뀌기 때문에 그걸 도메인에 연결하는게 CNAME 방식이다. IP가 유동적으로 사용된다는 장점이 있지만 대신 한 군데를 더 거친다는 것이 단점이다.
 
 도메인 이름에 대한 별칭을 매핑해준다.
 
@@ -143,4 +139,8 @@ TXT(TeXT): 도메인 이름에 대한 설명과 간단한 텍스트를 정한다
 
 먼저 브라우저에서 로컬 DNS 서버로 요청을 보낸다. 그리고 캐시를 확인한 후 루트 NS로 가서 근데 여기에는 A값이 없다(IP주소) 그래서 NS값이 com 네임 서버의 주소를 응답하게 된다.
 
-그럼 여기서도 가비아 네임서버의 주소를 응답해주게 됩니다. 그런데 가비아 네임서버에는 CNAME 타입으로 boribori.com이 매핑되어 있다. 그리고 네임서버에서 내부에서 요청을 해서 boribori.com에 대한 A 타입인 IP 값을 찾아서 최종적으로 클라이언트에게 주게 된다.
+그럼 여기서도 가비아 네임서버의 주소를 응답해주게 된다. 그런데 가비아 네임서버에는 CNAME 타입으로 boribori.com이 매핑되어 있다. 그리고 네임서버에서 내부에서 요청을 해서 boribori.com에 대한 A 타입인 IP 값을 찾아서 최종적으로 클라이언트에게 주게 된다.
+
+로컬 DNS서버는 일반적으로 통신사 것으로 세팅되어 있는데 이걸 수정하는 것은 정부에서 막아놓은 사이트에 접속하거나 또는 특정 서비스를 보다 빠르게 이용하기 위해 로컬 DNS서버를 기본값이랑 다른것으로 설정할 수 있다.
+
+예를 들어서 윈도우에서 기본 DNS를 구글 DNS 서버 주소인 8,8,8,8로 설정하면 유튜브 등 구글에서 제공하는 서비스를 보다 빠르고 쾌적하게 이용할 수 있습니다. 대신 다른 서비스들은 느려질 수 있으니 주의해야 한다.
