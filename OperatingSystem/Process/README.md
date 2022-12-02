@@ -6,6 +6,8 @@
 - 프로세스의 상태
 - 프로세스 제어 블록
 - 문맥 교환
+- 프로세스의 연산
+- 스레드(Thread)
 
 # 1️⃣ 프로세스의 개념
 
@@ -238,12 +240,12 @@
 
 💥 큰 차이점은 프로세스끼리는 기본적으로 자원을 공유하지 않지만, 스레드끼리는 같은 프로세스 내의 자원을 공유한다는 점이다.
 
-<img src="https://user-images.githubusercontent.com/89509857/205045963-baacc8a4-42a7-4a91-bcdc-2713e0110dcd.png" width="600">
+<img src="https://user-images.githubusercontent.com/89509857/205223718-3b58f7eb-dce8-4730-84a8-8fa23d0f2dab.png" width="700">
 
 - 프로세스를 fork 하여 동일한 프로세스 두 개를 동시에 실행하면 코드영역, 데이터 영역, 힙 영역 등을 비롯한 모든 자원이 복제되어 메모리에 적재된다.
 - 즉, PID, 저장된 메모리 주소를 제외하면 모든 것이 동일한 프로세스 두 개가 통째로 메모리에 적재되는 것.
 
-<img src="https://user-images.githubusercontent.com/89509857/205045978-f3c228e4-9875-438d-a7ac-3c7ac374b9d2.png" width="600">
+<img src="https://user-images.githubusercontent.com/89509857/205223988-a1cef9a2-48e8-4e3f-b6ac-3c96e68ada90.png" width="700">
 
 - 스레드들은 각기 다른 스레드 ID, 프로그램 카운터 값을 포함한 레지스터 값, 스택을 가질 뿐 프로세스가 가지고 있는 자원을 공유한다.
 
