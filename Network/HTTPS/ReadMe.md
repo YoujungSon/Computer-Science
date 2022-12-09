@@ -21,7 +21,7 @@ Hypertext Transfer Protocol Secure
 
 ## 1. 보안성
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6cb3abbe-0943-4187-b8ec-0be15b0256b2/Untitled.png)
+![image](https://user-images.githubusercontent.com/88040809/205275774-24011b74-cc78-479c-96fc-f8386184ee65.png)
 
 **HTTP로 데이터를 전송하는 경우**
 
@@ -55,10 +55,6 @@ HTTPS는 HTTP 자체를 암호화하는 것은 아닙니다.
 HTTP를 사용해서 운반하는 내용, 즉 HTTP Message Body를 암호화합니다.
 이때, HTTP Header는 암호화되지 않습니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1e0db504-ef25-4531-add7-cf6226d0a847/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aac4849a-e163-48d0-ae36-22d9d66a8466/Untitled.png)
-
 ‘Let’s Encrypt’와 ‘AWS Certificate Manager’는 SSL 인증서를 무료로 발급해주는 서비스입니다.
 
 # SSL이란
@@ -72,8 +68,7 @@ Netscape Communications Corporation에서 웹 서버와 웹 브라우저 간의 
 # 대칭키 방식
 
 대칭키는 이름에서 알 수 있듯이, 어떤 정보를 암호화·복호화 할 때 사용하는 키가 동일(대칭)한 경우 입니다.
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff2219b8-8969-4914-8b59-70ad09e6b87e/Untitled.png)
+![image](https://user-images.githubusercontent.com/88040809/205275916-866c872e-b5c9-4da8-a88b-bcbc38f02da3.png)
 
 즉, 암호화할 때 필요한 키값과, 해당 정보를 복호화할 때 필요한 키값이 동일한 경우입니다.
 
@@ -107,8 +102,7 @@ Session Key, Secret Key, Shared Key, 대칭키, 단용키라고도 함
 # 공개키(비대칭키) 방식
 
 비대칭키 또한 이름에서 알 수 있듯이, 어떠한 암호화·복호화를 할 때 사용하는 키가 서로 다른 경우를 의미합니다.
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b86cf9a-e3f3-4286-bf02-14b371bda0fe/Untitled.png)
+![image](https://user-images.githubusercontent.com/88040809/205275972-650248eb-592f-45af-8ac3-7a875e6a730d.png)
 
 대칭키와 다르게 비대칭키를 활용한 암호화에는 개인키와 공개키 두 가지가 사용됩니다.
 
@@ -170,7 +164,7 @@ HTTPS를 설명할 때도 말한 것처럼 서버와 브라우저간 전송되�
 
 # SSL 통신 방식 (SSL Hand Shake)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2f321452-7f45-4c0f-8e98-72b754b0812d/Untitled.png)
+![image](https://user-images.githubusercontent.com/88040809/205276010-cdf2dbd8-6d93-47fc-b1bb-a071cf734e20.png)
 
 ## 1. **CA 인증서 발급**
 
