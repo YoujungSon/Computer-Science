@@ -3,7 +3,7 @@
 * [List](https://github.com/vnfdusdl/computer-science/tree/main/DataStructure/List)
 * [Stack](https://github.com/vnfdusdl/computer-science/blob/main/DataStructure/Stack/ReadMe.md)
 * [Queue](https://github.com/vnfdusdl/computer-science/tree/main/DataStructure/Queue)
-
+* [Tree](https://github.com/vnfdusdl/computer-science/blob/main/DataStructure/Tree/ReadMe.md)
 
 # 자료구조란 무엇인가?
 > 자료의 집합을 의미하며, 각 원소들이 논리적으로 정의된 규칙에 의해 나열되며 자료에 대한 처리를 효율적으로 수행할 수 있도록 자료를 구분하여 표현한 것
