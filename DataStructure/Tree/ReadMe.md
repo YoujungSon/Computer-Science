@@ -1,10 +1,3 @@
-# 트리
-
-발표자: 손유정
-스터디 날짜: 2022년 12월 9일
-주차: 6주차
-학습범위: 트리
-
 ## 1. 트리 소개
 
 - 일반 트리, 이진 트리, 이진 탐색 트리(Binary Search Trees) 등 종류가 있다
@@ -15,8 +8,7 @@
 - 시작지점(entry point)이 단 하나여야 한다 -> 루트
 
 ### 1-1. 용어 정리
-
-![Untitled](%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%2069ff0a06bc714b789d91ac056fa9b39d/Untitled.png)
+![image](https://user-images.githubusercontent.com/88040809/206683053-6f5b7b40-10c7-47c9-a3aa-de4bff281d79.png)
 
 - Root : 최상위 노드
 - Child : Root에서 내려와 다른 노드로부터 연결된 노드
@@ -31,13 +23,13 @@
 - 네트워크 라우팅
 - 추상구문트리 (AST: Abstract Syntax Tree) : 프로그래밍 언어의 구문을 설명
 
-![Untitled](%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%2069ff0a06bc714b789d91ac056fa9b39d/Untitled%201.png)
+![image](https://user-images.githubusercontent.com/88040809/206683106-bd374c8f-83d2-4e7d-b817-9bc3ca02ee7c.png)
 
-![Untitled](%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%2069ff0a06bc714b789d91ac056fa9b39d/Untitled%202.png)
+![image](https://user-images.githubusercontent.com/88040809/206683138-e0ce7fdd-b5d4-4b43-97bd-92e323d47df4.png)
 
 - 인공지능 (ex. 최소 최대 트리, 결정 트리)
 
-![Untitled](%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%2069ff0a06bc714b789d91ac056fa9b39d/Untitled%203.png)
+![image](https://user-images.githubusercontent.com/88040809/206683178-b95162c5-c8ad-4b68-a1f6-5a2e04b41ead.png)
 
 - 파일 시스템의 디렉토리 구조
 
@@ -48,14 +40,13 @@
   - 값들은 모두 unique 해야 한다 (중복 금지)
   - 부모 노드의 왼쪽 자식 노드는 부모 노드보다 작고
   - 부모 노드의 오른쪽 자식 노드는 부모 노드보다 크다
-
-![Untitled](%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%2069ff0a06bc714b789d91ac056fa9b39d/Untitled%204.png)
+  
+![image](https://user-images.githubusercontent.com/88040809/206683218-aaff5464-964a-47b3-9e5b-0360ee56eaec.png)
 
 ### 2-1. 이진 탐색 트리의 탐색 과정
 
 아래 이진탐색트리에서 30를 찾아나가는 과정은 어떻게 될까?
-
-![Untitled](%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%2069ff0a06bc714b789d91ac056fa9b39d/Untitled%205.png)
+![image](https://user-images.githubusercontent.com/88040809/206683250-1c38d90e-a785-49a1-8016-2c16fe4cf819.png)
 
 1. 30는 20보다 큰가? (O) -> 우측 자식 노드(28)로 이동 (좌측 절반 날아감) -> 이진 탐색과 유사
 2. 30는 28보다 큰가? (O) -> 우측 자식 노드(33)로 이동
@@ -412,17 +403,16 @@ tree.find(1);
 
 ## 4. 이진 탐색 트리의 시간 복잡도
 
+![image](https://user-images.githubusercontent.com/88040809/206683447-0ea62be3-c443-402b-9bd8-d5601a35a2a2.png)
+![Untitled](%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%2069ff0a06bc714b789d91ac056fa9b39d/Untitled%208.png)
 - 삽입 : O(log n) -> best, average
 - 탐색 : O(log n)
 - log n 의 시간 복잡도는 매우 우수한 편이다!
 - 하지만 worst case도 존재한다
   - 예) 한 방향으로만 늘어지는 형태
-  ![Untitled](%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%2069ff0a06bc714b789d91ac056fa9b39d/Untitled%206.png)
+  
+![image](https://user-images.githubusercontent.com/88040809/206683404-84b7dd94-347c-4285-a2b8-f60e4c7f2ec3.png)
   - 복잡도가 깊이만큼 증가 : O(N)
-
-![Untitled](%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%2069ff0a06bc714b789d91ac056fa9b39d/Untitled%207.png)
-
-![Untitled](%E1%84%90%E1%85%B3%E1%84%85%E1%85%B5%2069ff0a06bc714b789d91ac056fa9b39d/Untitled%208.png)
 
 # 트리 순회 (tree traversal)
 
