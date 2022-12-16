@@ -16,7 +16,7 @@
 
 - 소셜 네트워크
 
-![Untitled](%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%91%E1%85%B3%208c74a9b2cd3c486587331e8d65e84c75/Untitled.png)
+![image](https://user-images.githubusercontent.com/88040809/208044130-6becbc00-82fa-43ec-809c-7e19fc3f5bdf.png)
 
 - 지도 기능, 길 찾기
 - 추천
@@ -28,7 +28,7 @@
 1. 정점 (Vertex) : node와 같은 의미
 2. 간선 (Edge) : 노드간 연결
 
-   ![Untitled](%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%91%E1%85%B3%208c74a9b2cd3c486587331e8d65e84c75/Untitled%201.png)
+  ![image](https://user-images.githubusercontent.com/88040809/208044360-3087b4ef-e540-42ea-b0ef-07a292000b23.png)
 
 3. 방향 그래프 (Directed Graph)
    - 간선이 방향을 가진다
