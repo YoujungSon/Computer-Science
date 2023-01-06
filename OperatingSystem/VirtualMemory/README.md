@@ -59,7 +59,7 @@
 
  <img src="https://user-images.githubusercontent.com/37871541/78530736-2c410780-781f-11ea-8186-50e4a90a2691.png" width="600s">
 
-- 프로세스마다 각자의 프로세스 테이블을 가지고 있고, 각 프로세스의 페이지 테이블은 메모리에 적재되어 있음
+- 프로세스마다 각자의 페이지 테이블을 가지고 있고, 각 프로세스의 페이지 테이블은 메모리에 적재되어 있음
 - CPU 내의 페이지 테이블 베이스 레지스터(PTBR, Page Table Based Register)는 각 프로세스의 페이지 테이블이 적재된 주소를 가리키고 있음
 
 <img src="https://user-images.githubusercontent.com/89509857/210052062-8a30a116-380c-43a6-8b0d-714aba172b56.png" width=700>
@@ -123,6 +123,7 @@ A. 10번지
 ## ✔ 세그먼트 테이블
 
 : 페이징 테이블과 비슷하게 '세그먼트 번호(segment-number)'와 '변위(offset)'이루어져 있지만, 세그먼트의 크기가 일정하지 않기 때문에 limit 정보다 추가로 있다.
+
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fol2eM%2FbtrnC38FGmG%2FKv5nbXQG2rCUeck0pRS8I0%2Fimg.png" width="700">
 
 Q. 논리주소 <2, 100>
